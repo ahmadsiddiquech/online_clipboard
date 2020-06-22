@@ -21,7 +21,7 @@ function more_secure($password){
 function is_login(){
 	$curr_controller = $this->router->fetch_class();
 	// echo $curr_controller;exit;
-	if($curr_controller != 'front' && $curr_controller != 'aboutus' && $curr_controller != 'contactus' && $curr_controller != 'games' && $curr_controller != 'upcomingevents' && $curr_controller != 'account' && $curr_controller != 'profile' && $curr_controller != 'accountsetting'){
+	if($curr_controller != 'front' && $curr_controller != 'account' ){
 		$data = $this->session->userdata('user_data');
 		if(!is_array($data)){
 			redirect(ADMIN_BASE_URL);
@@ -48,7 +48,7 @@ function has_permission($outlet_id = ''){
 	$role_id = 0;
 	if (isset($user_data['role_id']) && !empty($user_data['role_id']))
 		$role_id = $user_data['role_id'];
-	if (($user_data['role'] != 'portal admin') && $action != 'set_outlet_session' && $curr_controller != 'front' && $curr_controller != 'aboutus' && $curr_controller != 'contactus' && $curr_controller != 'games' && $curr_controller != 'upcomingevents' && $curr_controller != 'account' && $curr_controller != 'profile' && $curr_controller != 'accountsetting') {
+	if (($user_data['role'] != 'portal admin') && $action != 'set_outlet_session' && $curr_controller != 'front' && $curr_controller != 'account') {
 		
 		if($curr_controller != "dashboard"){
 			$permission = Modules:: run('permission/has_permission',$role_id,$outlet_id,$curr_controller,$action);

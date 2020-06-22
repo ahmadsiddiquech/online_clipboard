@@ -94,7 +94,7 @@ $(document).ready(function(){
                     
                        $.ajax({
                             type: 'POST',
-                            url: "<?php ADMIN_BASE_URL?>users/delete",
+                            url: "<?=ADMIN_BASE_URL?>users/delete",
                             data: {'id': id},
                             async: false,
                             success: function() {

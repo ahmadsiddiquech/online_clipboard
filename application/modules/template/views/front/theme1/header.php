@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="<?=STATIC_FRONT_CSS?>animate.css">
     <link rel="stylesheet" href="<?=STATIC_FRONT_CSS?>responsive.css">
     <link rel="stylesheet" href="<?=STATIC_FRONT_CSS?>responsive.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <link rel="icon" type="image/png" href="<?=STATIC_FRONT_IMAGE?>logo.png">
 </head>
 <body>
@@ -25,7 +27,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-xs-6 col-sm-3">
-                    <a href="#" class="logo">
+                    <a href="<?=BASE_URL?>front" class="logo">
                         <img src="<?=STATIC_FRONT_IMAGE?>logo.png" alt="">
                     </a>
                 </div>
@@ -46,11 +48,11 @@
                                 <!-- Collect the nav links, forms, and other content for toggling -->
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <ul class="nav navbar-nav">
-                                        <li><a href="#banner">Home</a></li>
-                                        <li><a href="#service">Service</a></li>
-                                        <li><a href="#feature">Feature</a></li>
-                                        <li><a href="#utility">Utility</a></li>
-                                        <li><a href="#subscribe">Reach us</a></li>
+                                        <li><a href="<?=BASE_URL?>front#banner">Home</a></li>
+                                        <li><a href="<?=BASE_URL?>front#service">Service</a></li>
+                                        <li><a href="<?=BASE_URL?>front#feature">Feature</a></li>
+                                        <li><a href="<?=BASE_URL?>front#utility">Utility</a></li>
+                                        <li><a href="<?=BASE_URL?>front#subscribe">Reach us</a></li>
                                     </ul>
                                   
                                 </div><!-- /.navbar-collapse -->
@@ -64,6 +66,14 @@
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <?php
+                            $data = $this->session->userdata('gamers_data');
+                        ?>
+                        <?php if (isset($data) && !empty($data)) { ?>
+                        <li><a href="<?=BASE_URL?>account" >Profile</a></li>
+                        <?php } else { ?>
+                            <li><a href="" data-toggle="modal" data-target="#myModal">Login/Signup</a></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>

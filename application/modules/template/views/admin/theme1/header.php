@@ -5,7 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
    <meta name="description" content="Bootstrap Admin App + jQuery">
    <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
-   <title>Admin - Gaming Zoon</title>
+   <title>Admin - Clipboard</title>
    <link rel="icon" type="image/png" href="<?php echo STATIC_ADMIN_IMAGE ?>logo.png">
    
    <!-- JQUERY-->
@@ -64,7 +64,7 @@
                <a href="#/" class="navbar-brand">
                   <div class="brand-logo">
                      
-                      <img src="<?php echo STATIC_ADMIN_IMAGE?>logo-full.png" style="width: 85%;" alt="App Logo" class="img-responsive">
+                      <img src="<?php echo STATIC_ADMIN_IMAGE?>logo.png" style="width: 85%;" alt="App Logo" class="img-responsive">
                   </div>
                   <div class="brand-logo-collapsed">
                      <img src="<?php echo STATIC_ADMIN_IMAGE?>logo.png" style="width: 80%;padding-top: 5px;" alt="App Logo" class="img-responsive"> 

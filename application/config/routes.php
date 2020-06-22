@@ -46,4 +46,13 @@ $route['admin/(:any)'] = "$1/$1";
 $route['default_controller'] = "front";
 /*-------API ROUTES -----------*/
 
+$route['login_api'] = "front/login_api";
+$route['register_api'] = "front/register_api";
+$route['logout_api'] = "front/logout_api";
+$route['get_list_api'] = "front/get_list_api";
+$route['create_list_api'] = "front/create_list_api";
+$route['create_list_item_api'] = "front/create_list_item_api";
+$route['delete_list'] = "front/delete_list";
+$route['delete_list_item'] = "front/delete_list_item";
+
 $route['404_override'] = '';

@@ -1,5 +1,7 @@
 <?php 
-    $this->load->view('front/theme1/'.$header_file);
+	if (isset($header_file)) {
+		$this->load->view('front/theme1/'.$header_file);
+	}
 
     $path = $module.'/'.$view_file;
     

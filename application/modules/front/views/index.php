@@ -181,22 +181,15 @@
                             <h2>Send Your Querry</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, non!</p>
                         </div>
-                        
-                        
-
                         <form class="form-inline text-center col-sm-12 col-xs-12" role="form">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="signup-form" >
-                                
-                                
+                                <input type="text" class="form-control" id="signup-form">
                             </div>
                             <a href="" type="submit" class="btn btn-default btn-signup">
                                 <i class="fa fa-paper-plane"></i>
                             </a>
                         </form>
                     </div>
-                    
-
                 </div>
             </div>
         </div>
